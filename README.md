@@ -6,7 +6,6 @@
 ---
 
 ## Architecture
-(What components are used and how they connect)
 
 - Endpoint:
 - Logging:
@@ -23,7 +22,6 @@
 ---
 
 ## Setup Summary
-(High-level steps only — no long tutorial)
 
 - 
 - 
@@ -32,8 +30,6 @@
 ---
 
 ## Log Collection
-(What types of logs/events are you capturing?)
-
 - 
 - 
 - 
@@ -46,7 +42,6 @@ See detailed analysis here:
 ---
 
 ## Key Learnings
-(What you gained from this)
 
 - 
 - 
@@ -55,7 +50,7 @@ See detailed analysis here:
 ---
 
 ## Future Improvements
-(What you’d improve or add)
+
 
 - 
 - 
