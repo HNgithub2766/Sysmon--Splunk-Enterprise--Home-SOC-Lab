@@ -1,4 +1,4 @@
-# Home SOC Lab – Sysmon + Elastic SIEM
+# Home SOC Lab – Sysmon + Splunk Enterprise
 
 ## Objective
 (What is the goal of this lab?)
