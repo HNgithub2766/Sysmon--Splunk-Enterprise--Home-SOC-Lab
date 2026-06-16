@@ -29,6 +29,7 @@ The lab simulates a real-world security monitoring environment by collecting and
 | Sysmon            | Enhanced Windows event logging                                     |
 | Windows 11 VM     | Endpoint used to generate security events                          |
 | VirtualBox        | Virtualisation platform hosting the lab environment                |
+| Kali Linux VM     | Attack Simulation platform 
 
 ### Log Sources
 
