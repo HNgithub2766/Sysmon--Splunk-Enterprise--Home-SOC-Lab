@@ -1,133 +1,64 @@
-# Splunk SIEM & Sysmon Home SOC Lab
-
 ## Overview
 
-This project documents the development of a Home Security Operations Centre (SOC) lab built using Splunk Enterprise and Sysmon. The purpose of the lab is to gain hands-on experience with security monitoring, log analysis, alert investigation and incident response processes commonly used by SOC analysts.
+This project documents the development of a Home Security Operations Centre (SOC) lab built using Splunk Enterprise, Sysmon and Atomic Red Team. The purpose of the lab is to gain hands-on experience with security monitoring, detection engineering, alert development and log analysis commonly performed by SOC analysts and detection engineers.
 
-The lab simulates a real-world security monitoring environment by collecting and analysing Windows security events and Sysmon telemetry. It is designed to support practical learning around threat detection, security investigations and MITRE ATT&CK mapping.
+The lab simulates a real-world security monitoring environment by collecting and analysing Windows Security and Sysmon telemetry generated through Atomic Red Team attack simulations. The focus of the project is to develop, test and tune security detections, create alerts and map observed activity to the MITRE ATT&CK framework.
 
 ---
 
 ## Objectives
 
 * Gain hands-on experience with SIEM technologies.
-* Develop familiarity with Windows event logging and Sysmon telemetry.
-* Practice log analysis and alert investigation.
+* Develop familiarity with Windows Event Logs and Sysmon telemetry.
+* Build and validate security detections using Splunk SPL.
+* Develop and tune alerting logic to reduce false positives.
 * Understand attacker tactics, techniques and procedures (TTPs).
-* Map detected activity to the MITRE ATT&CK framework.
-* Build practical SOC analyst skills through simulated attack scenarios.
+* Map observed activity to the MITRE ATT&CK framework.
+* Build practical SOC monitoring and detection engineering skills through simulated attack scenarios.
 
 ---
 
-## Lab Environment
+## Detection Engineering Workflow
 
-### Components
-
-| Component         | Purpose                                                            |
-| ----------------- | ------------------------------------------------------------------ |
-| Splunk Enterprise | SIEM platform used for log collection, searching and investigation |
-| Sysmon            | Enhanced Windows event logging                                     |
-| Windows 11 VM     | Endpoint used to generate security events                          |
-| VirtualBox        | Virtualisation platform hosting the lab environment                |
-| Kali Linux VM     | Attack Simulation platform 
-
-### Log Sources
-
-* Windows Security Logs
-* Sysmon Operational Logs
-* Process Creation Events
-* Network Connection Events
-* Authentication Events
-* PowerShell Activity
-
----
-
-## Security Monitoring Activities
-
-### Event Monitoring
-
-The lab is configured to monitor:
-
-* User logon and logoff activity
-* Failed authentication attempts
-* Account management events
-* Process creation activity
-* PowerShell execution
-* Network connections
-* Service creation events
-
-### Investigation Workflow
-
-1. Alert or suspicious activity identified.
-2. Review relevant logs within Splunk.
-3. Analyse associated processes, users and hosts.
-4. Determine potential malicious behaviour.
-5. Map activity to MITRE ATT&CK techniques.
-6. Document findings and remediation recommendations.
+1. Execute Atomic Red Team technique.
+2. Generate telemetry within Windows and Sysmon.
+3. Identify relevant events within Splunk.
+4. Develop SPL detection logic.
+5. Validate detection accuracy.
+6. Create and configure Splunk alerts.
+7. Tune detections to reduce false positives.
+8. Map detections to MITRE ATT&CK techniques.
+9. Document findings and lessons learned.
 
 ---
 
 ## Example Detection Use Cases
 
-### Account Enumeration
+Each detection includes:
 
-Detection of commands such as:
-
-```cmd
-whoami
-net user
-query user
-```
-
-MITRE ATT&CK:
-
-* T1033 – System Owner/User Discovery
-
----
-
-### Failed Login Monitoring
-
-Detection of excessive failed authentication attempts.
-
-MITRE ATT&CK:
-
-* T1110 – Brute Force
-
----
-
-### Suspicious PowerShell Activity
-
-Monitoring PowerShell execution for potentially malicious commands.
-
-MITRE ATT&CK:
-
-* T1059.001 – PowerShell
-
----
-
-### Process Creation Monitoring
-
-Monitoring unusual or suspicious process execution using Sysmon Event ID 1.
-
-MITRE ATT&CK:
-
-* T1055 – Process Injection
-* T1059 – Command and Scripting Interpreter
+* Attack simulation
+* Relevant Sysmon or Windows event IDs
+* Splunk detection query
+* Alert configuration
+* MITRE ATT&CK mapping
+* Detection tuning recommendations
+* Screenshots of generated telemetry and alert results
 
 ---
 
 ## Skills Developed
 
+* Detection Engineering
 * SIEM Administration
 * Splunk Search Processing Language (SPL)
 * Windows Event Log Analysis
 * Sysmon Log Analysis
 * Security Monitoring
-* Alert Triage
-* Incident Investigation
+* Alert Development and Tuning
 * Threat Detection
 * MITRE ATT&CK Mapping
 * Security Documentation
+* Atomic Red Team Attack Simulation
 
 ---
 
@@ -138,13 +69,10 @@ Project currently in progress.
 Planned enhancements include:
 
 * Additional detection rules
+* Correlation searches
+* Alert tuning and false positive reduction
 * Dashboard development
 * Threat hunting exercises
 * Microsoft Sentinel integration
-* Atomic Red Team attack simulations
+* Expanded Atomic Red Team coverage
 
----
-
-## Disclaimer
-
-This lab is used solely for educational and defensive security purposes within an isolated virtual environment.
