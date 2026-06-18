@@ -1,3 +1,5 @@
+##T1033-System-Owner-User-Discovery
+
 ## Objective
 
 Simulate attacker reconnaissance activity by identifying the current user and logged-on sessions on a Windows host.
