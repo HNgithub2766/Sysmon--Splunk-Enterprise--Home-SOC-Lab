@@ -18,6 +18,8 @@ The lab simulates a real-world security monitoring environment by collecting and
 
 ---
 
+## Lab Environment
+
 ### Components
 
 | Component | Purpose |
