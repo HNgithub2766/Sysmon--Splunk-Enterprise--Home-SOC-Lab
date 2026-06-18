@@ -1,4 +1,4 @@
-# T1033-System-Owner-User-Discovery
+# T1033-System-Owner/User-Discovery
 
 ## Objective
 
