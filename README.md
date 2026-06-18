@@ -4,7 +4,7 @@
 
 This project documents the development of a Home Security Operations Centre (SOC) lab built using Splunk Enterprise, Sysmon and Atomic Red Team. The purpose of the lab is to gain hands-on experience with security monitoring, detection engineering, alert development and log analysis commonly performed by SOC analysts and detection engineers.
 
-The lab simulates a real-world security monitoring environment by collecting and analysing Windows Security and Sysmon telemetry generated through Atomic Red Team attack simulations. The focus of the project is to develop, test and tune security detections, create alerts and map observed activity to the MITRE ATT&CK framework.
+The lab simulates a real-world security monitoring environment by collecting and analysing Windows Security and Sysmon logs generated through Atomic Red Team attack simulations. The focus of the project is to develop, test and tune security detections, create alerts and map observed activity to the MITRE ATT&CK framework.
 
 ---
 
@@ -50,7 +50,7 @@ Detection Rules & Alerts
 | Component         | Purpose                                                       |
 | ----------------- | ------------------------------------------------------------- |
 | Splunk Enterprise | SIEM platform used for log collection, searching and alerting |
-| Sysmon            | Enhanced Windows telemetry and process monitoring             |
+| Sysmon            | Enhanced Windows event logging and process monitoring         |
 | Windows 11 VM     | Endpoint used to generate security events                     |
 | Kali Linux VM     | Attack simulation platform                                    |
 | Atomic Red Team   | ATT&CK-based attack simulation framework                      |
@@ -70,7 +70,7 @@ Detection Rules & Alerts
 ## Detection Engineering Workflow
 
 1. Execute Atomic Red Team technique.
-2. Generate telemetry within Windows and Sysmon.
+2. Generate logs within Windows and Sysmon.
 3. Identify relevant events within Splunk.
 4. Develop SPL detection logic.
 5. Validate detection accuracy.
@@ -83,7 +83,7 @@ Detection Rules & Alerts
 
 ## Detection Case Studies
 
-This repository contains a collection of detection engineering case studies developed using Atomic Red Team attack simulations, Sysmon telemetry and Splunk Enterprise.
+This repository contains a collection of detection engineering case studies developed using Atomic Red Team attack simulations, Sysmon logs and Splunk Enterprise.
 
 Each case study includes:
 
@@ -94,7 +94,7 @@ Each case study includes:
 * Alert creation and configuration
 * MITRE ATT&CK mapping
 * Detection tuning recommendations
-* Screenshots of telemetry and alert results
+* Screenshots of logs and alert results
 * Lessons learned and future improvements
 
 The objective of each case study is to demonstrate the process of transforming attacker behaviour into actionable security detections and alerts within a SIEM platform.
