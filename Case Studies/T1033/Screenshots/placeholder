@@ -1,1 +1,43 @@
+### Atomic Test Execution
 
+'Invoke-AtomicTest T1033'
+
+*Screenshot showing the test ran successfully.
+
+### Splunk Detection Query
+
+*Screenshot of SPL:
+
+
+
+
+### Search Results
+
+*Show the actual event i.e.
+
+*Image: C:\Windows\System32\whoami.exe
+User: Hafsa*
+
+
+
+### Alert Configuration
+
+*T1033 - User Discovery Alert
+
+*Include screenshot of:
+
+*Search
+*Schedule
+*Trigger conditions
+
+
+
+### MITRE Mapping (Optional)
+
+*Include diagram showing:
+
+T1033
+↓
+Discovery
+↓
+User Enumeration
