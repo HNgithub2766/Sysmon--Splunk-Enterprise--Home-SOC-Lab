@@ -69,6 +69,144 @@ Each detection includes:
 
 ---
 
+## Detection Use Cases
+
+The following detections are being developed and validated using Sysmon telemetry, Splunk SPL and Atomic Red Team simulations.
+
+### T1033 - System Owner/User Discovery
+
+Detection of user enumeration and discovery activity through commands such as:
+
+```cmd
+whoami
+net user
+query user
+```
+
+**Data Sources**
+
+* Sysmon Event ID 1 (Process Creation)
+
+**MITRE ATT&CK**
+
+* T1033 - System Owner/User Discovery
+
+---
+
+### T1110 - Brute Force
+
+Detection of repeated failed authentication attempts.
+
+**Data Sources**
+
+* Windows Security Event ID 4625
+
+**MITRE ATT&CK**
+
+* T1110 - Brute Force
+
+---
+
+### T1059.001 - PowerShell
+
+Detection of PowerShell execution and potentially suspicious command activity.
+
+**Data Sources**
+
+* Sysmon Event ID 1
+* PowerShell Operational Logs
+
+**MITRE ATT&CK**
+
+* T1059.001 - PowerShell
+
+---
+
+### T1082 - System Information Discovery
+
+Detection of host reconnaissance commands such as:
+
+```cmd
+systeminfo
+hostname
+wmic
+```
+
+**Data Sources**
+
+* Sysmon Event ID 1
+
+**MITRE ATT&CK**
+
+* T1082 - System Information Discovery
+
+---
+
+### T1016 - System Network Configuration Discovery
+
+Detection of network discovery activity through commands such as:
+
+```cmd
+ipconfig /all
+route print
+arp -a
+```
+
+**Data Sources**
+
+* Sysmon Event ID 1
+
+**MITRE ATT&CK**
+
+* T1016 - System Network Configuration Discovery
+
+---
+
+### T1105 - Ingress Tool Transfer
+
+Detection of file downloads and tool transfers to a compromised host.
+
+Examples include:
+
+```powershell
+Invoke-WebRequest
+curl
+certutil
+```
+
+**Data Sources**
+
+* Sysmon Event ID 1 (Process Creation)
+* Sysmon Event ID 3 (Network Connections)
+
+**MITRE ATT&CK**
+
+* T1105 - Ingress Tool Transfer
+
+---
+
+### T1003 - OS Credential Dumping
+
+Detection of attempts to access or dump credentials from memory.
+
+Examples include:
+
+```cmd
+procdump.exe
+mimikatz.exe
+rundll32.exe
+```
+
+**Data Sources**
+
+* Sysmon Event ID 1 (Process Creation)
+* Sysmon Event ID 10 (Process Access)
+
+**MITRE ATT&CK**
+
+* T1003 - OS Credential Dumping
+
+
 ## Skills Developed
 
 * Detection Engineering
