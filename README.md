@@ -18,7 +18,16 @@ The lab simulates a real-world security monitoring environment by collecting and
 
 ---
 
-## Lab Environment ### Components | Component | Purpose | | ----------------- | ------------------------------------------------------------------ | | Splunk Enterprise | SIEM platform used for log collection, searching and investigation | | Sysmon | Enhanced Windows event logging | | Windows 11 VM | Endpoint used to generate security events | | VirtualBox | Virtualisation platform hosting the lab environment | | Kali Linux VM | Attack Simulation platform
+### Components
+
+| Component | Purpose |
+|-----------|---------|
+| Splunk Enterprise | SIEM platform used for log collection, searching and alerting |
+| Sysmon | Enhanced Windows telemetry and process monitoring |
+| Windows 11 VM | Endpoint used to generate security events |
+| Kali Linux VM | Attack simulation platform |
+| Atomic Red Team | ATT&CK-based attack simulation framework |
+| VirtualBox | Virtualisation platform hosting the lab environment |
 
 ---
 
