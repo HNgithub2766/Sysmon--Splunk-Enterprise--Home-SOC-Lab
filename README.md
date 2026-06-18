@@ -31,6 +31,14 @@ The lab simulates a real-world security monitoring environment by collecting and
 | Atomic Red Team | ATT&CK-based attack simulation framework |
 | VirtualBox | Virtualisation platform hosting the lab environment |
 
+### Log Sources 
+* Windows Security Logs
+* Sysmon Operational Logs
+* Process Creation Events
+* Network Connection Events
+* Authentication Events
+* PowerShell Activity
+  
 ---
 
 ## Detection Engineering Workflow
