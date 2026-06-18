@@ -11,7 +11,7 @@ The lab simulates a real-world security monitoring environment by collecting and
 ## Objectives
 
 * Gain hands-on experience with SIEM technologies.
-* Develop familiarity with Windows Event Logs and Sysmon telemetry.
+* Develop familiarity with Windows Event Logs and Sysmon logs.
 * Build and validate security detections using Splunk SPL.
 * Develop and tune alerting logic to reduce false positives.
 * Understand attacker tactics, techniques and procedures (TTPs).
@@ -88,7 +88,7 @@ This repository contains a collection of detection engineering case studies deve
 Each case study includes:
 
 * Attack simulation details
-* Generated Windows and Sysmon telemetry
+* Generated Windows and Sysmon logs
 * Relevant event IDs
 * Splunk SPL detection queries
 * Alert creation and configuration
@@ -103,7 +103,7 @@ The objective of each case study is to demonstrate the process of transforming a
 
 ## Detection Use Cases
 
-The following detections are being developed and validated using Sysmon telemetry, Splunk SPL and Atomic Red Team simulations.
+The following detections are being developed and validated using Sysmon logs, Splunk SPL and Atomic Red Team simulations.
 
 ### T1033 - System Owner/User Discovery
 
