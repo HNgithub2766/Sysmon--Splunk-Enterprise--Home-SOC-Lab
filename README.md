@@ -1,3 +1,5 @@
+# Splunk SIEM & Sysmon Home SOC Lab
+
 ## Overview
 
 This project documents the development of a Home Security Operations Centre (SOC) lab built using Splunk Enterprise, Sysmon and Atomic Red Team. The purpose of the lab is to gain hands-on experience with security monitoring, detection engineering, alert development and log analysis commonly performed by SOC analysts and detection engineers.
@@ -18,27 +20,51 @@ The lab simulates a real-world security monitoring environment by collecting and
 
 ---
 
+## Lab Architecture
+
+```text
+Atomic Red Team
+        │
+        ▼
+Windows 11 VM
+        │
+        ▼
+Sysmon
+        │
+        ▼
+Splunk Universal Forwarder
+        │
+        ▼
+Splunk Enterprise
+        │
+        ▼
+Detection Rules & Alerts
+```
+
+---
+
 ## Lab Environment
 
 ### Components
 
-| Component | Purpose |
-|-----------|---------|
+| Component         | Purpose                                                       |
+| ----------------- | ------------------------------------------------------------- |
 | Splunk Enterprise | SIEM platform used for log collection, searching and alerting |
-| Sysmon | Enhanced Windows telemetry and process monitoring |
-| Windows 11 VM | Endpoint used to generate security events |
-| Kali Linux VM | Attack simulation platform |
-| Atomic Red Team | ATT&CK-based attack simulation framework |
-| VirtualBox | Virtualisation platform hosting the lab environment |
+| Sysmon            | Enhanced Windows telemetry and process monitoring             |
+| Windows 11 VM     | Endpoint used to generate security events                     |
+| Kali Linux VM     | Attack simulation platform                                    |
+| Atomic Red Team   | ATT&CK-based attack simulation framework                      |
+| VirtualBox        | Virtualisation platform hosting the lab environment           |
 
-### Log Sources 
+### Log Sources
+
 * Windows Security Logs
 * Sysmon Operational Logs
 * Process Creation Events
 * Network Connection Events
 * Authentication Events
 * PowerShell Activity
-  
+
 ---
 
 ## Detection Engineering Workflow
@@ -55,17 +81,23 @@ The lab simulates a real-world security monitoring environment by collecting and
 
 ---
 
-## Example Detection Use Cases
+## Detection Case Studies
 
-Each detection includes:
+This repository contains a collection of detection engineering case studies developed using Atomic Red Team attack simulations, Sysmon telemetry and Splunk Enterprise.
 
-* Attack simulation
-* Relevant Sysmon or Windows event IDs
-* Splunk detection query
-* Alert configuration
+Each case study includes:
+
+* Attack simulation details
+* Generated Windows and Sysmon telemetry
+* Relevant event IDs
+* Splunk SPL detection queries
+* Alert creation and configuration
 * MITRE ATT&CK mapping
 * Detection tuning recommendations
-* Screenshots of generated telemetry and alert results
+* Screenshots of telemetry and alert results
+* Lessons learned and future improvements
+
+The objective of each case study is to demonstrate the process of transforming attacker behaviour into actionable security detections and alerts within a SIEM platform.
 
 ---
 
@@ -206,6 +238,7 @@ rundll32.exe
 
 * T1003 - OS Credential Dumping
 
+---
 
 ## Skills Developed
 
@@ -227,7 +260,7 @@ rundll32.exe
 
 Project currently in progress.
 
-Planned enhancements include:
+### Planned Enhancements
 
 * Additional detection rules
 * Correlation searches
@@ -237,3 +270,8 @@ Planned enhancements include:
 * Microsoft Sentinel integration
 * Expanded Atomic Red Team coverage
 
+---
+
+## Disclaimer
+
+This lab is used solely for educational and defensive security purposes within an isolated virtual environment.
