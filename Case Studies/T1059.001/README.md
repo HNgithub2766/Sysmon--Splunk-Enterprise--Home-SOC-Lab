@@ -18,7 +18,6 @@ Simulate PowerShell execution using Atomic Red Team to generate Windows and Sysm
 * Splunk Enterprise
 * Sysmon
 * Windows 11 VM
-* Kali Linux VM
 * Atomic Red Team
 * VirtualBox
 
