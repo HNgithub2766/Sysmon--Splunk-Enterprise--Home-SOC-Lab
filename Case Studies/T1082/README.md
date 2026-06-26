@@ -39,18 +39,7 @@ The Atomic Red Team test executed multiple system discovery commands to enumerat
 ### Splunk Search
 
 ```spl
-source="WinEventLog:Microsoft-Windows-Sysmon/Operational"
-EventCode=1
-(
-Image="*\\systeminfo.exe"
-OR Image="*\\hostname.exe"
-OR Image="*\\wmic.exe"
-OR Image="*\\reg.exe"
-OR Image="*\\vssadmin.exe"
-OR CommandLine="*Get-WmiObject*"
-OR CommandLine="*Get-ComputerInfo*"
-OR CommandLine="*gdr*"
-)
+source="WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1 (Image="*\\systeminfo.exe" OR Image="*\\hostname.exe" OR Image="*\\wmic.exe" OR Image="*\\reg.exe")
 ```
 
 ---
