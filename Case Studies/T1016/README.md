@@ -54,8 +54,8 @@ EventCode=1
 | Severity       | Low                                            |
 | Schedule       | Every Hour                                     |
 | Trigger        | Results > 0                                    |
-| Trigger Mode   | For Each Result                                |
-| Throttle       | Disabled                                       |
+| Trigger Mode   | Once                                           |
+| Throttle       | Enabled (every 60 mins)                        |
 | Trigger Action | Add to Triggered Alerts                        |
 
 ---
