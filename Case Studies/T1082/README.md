@@ -18,7 +18,6 @@ Simulate system information discovery activity using Atomic Red Team to generate
 * Splunk Enterprise
 * Sysmon
 * Windows 11 VM
-* Kali Linux VM
 * Atomic Red Team
 * VirtualBox
 
