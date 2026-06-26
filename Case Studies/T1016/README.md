@@ -30,7 +30,7 @@ Simulate network configuration discovery activity using Atomic Red Team to gener
 Invoke-AtomicTest T1016
 ```
 
-The Atomic Red Team test executed network discovery commands to enumerate network configuration information including IP addresses, network adapters, routing tables and ARP cache entries.
+The Atomic Red Team test executed multiple network configuration discovery commands including `ipconfig`, `netsh`, `arp`, `nbtstat`, `net config`, `route`, `nslookup` and firewall enumeration. Several advanced tests require an Active Directory environment, external payloads or additional dependencies and may not execute successfully in a standalone Windows lab. Overall, the test generated valuable Windows and Sysmon telemetry for developing and validating Splunk detections for MITRE ATT&CK T1016.
 
 ---
 
@@ -74,7 +74,8 @@ LogSource: Microsoft-Windows-Sysmon/Operational
 ## Findings
 
 * Successfully generated Sysmon Event ID 1 process creation events.
-* Captured execution of network discovery commands including `ipconfig`, `route` and `arp`.
+* Captured execution of network discovery commands including `ipconfig`, `arp`, `nbtstat`, `netsh`, `net config` and `nslookup`.
+* Some Atomic tests requiring Active Directory, external payloads or Internet connectivity were not applicable to the lab environment.
 * Detection successfully identified the generated telemetry within Splunk.
 * Alert triggered as expected following execution of the Atomic Red Team simulation.
 
