@@ -52,7 +52,7 @@ Detection Rules & Alerts
 | Splunk Enterprise | SIEM platform used for log collection, searching and alerting |
 | Sysmon            | Enhanced Windows event logging and process monitoring         |
 | Windows 11 VM     | Endpoint used to generate security events                     |
-| Kali Linux VM     | Attack simulation platform                                    |
+| Kali Linux VM     | Attack simulation platform(used in some attack simulations)   |
 | Atomic Red Team   | ATT&CK-based attack simulation framework                      |
 | VirtualBox        | Virtualisation platform hosting the lab environment           |
 
