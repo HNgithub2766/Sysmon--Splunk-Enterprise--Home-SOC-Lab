@@ -18,7 +18,6 @@ Simulate network configuration discovery activity using Atomic Red Team to gener
 * Splunk Enterprise
 * Sysmon
 * Windows 11 VM
-* Kali Linux VM
 * Atomic Red Team
 * VirtualBox
 
